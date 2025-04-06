@@ -1,3 +1,3 @@
 # Notes-App
 
-- [ ] Settings page
+- [x] Settings page
