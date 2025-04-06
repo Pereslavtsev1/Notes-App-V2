@@ -1,6 +1,8 @@
 # Notes-App
 
-- [x] Settings page
-- [x] Docker compose
+## Tasks
+
 - [ ] Login page
 - [ ] Sign up page
+- [x] Settings page
+- [x] Docker compose
