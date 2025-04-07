@@ -120,7 +120,10 @@ body {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 .base-input {
-  @apply bg-background text-foreground placeholder:text-foreground/50 hover:border-foreground/80 focus:border-foreground border-foreground/30 border px-3 py-2 duration-200 ease-in-out focus:outline-none;
+  @apply bg-background placeholder:text-foreground/50 hover:border-foreground/80 focus:border-foreground border-foreground/30 border px-3 py-2 duration-200 ease-in-out focus:outline-none;
+}
+.base-button {
+  @apply bg-background hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 flex h-9 w-full items-center gap-2 rounded-md px-3 py-2 text-sm font-medium whitespace-nowrap transition-all;
 }
 @layer base {
   * {
