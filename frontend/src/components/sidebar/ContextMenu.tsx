@@ -19,7 +19,7 @@ const ContextMenu = ({
   return (
     <div
       onMouseLeave={() => close()}
-      className="bg-sidebar absolute z-50 flex flex-col space-y-2 overflow-hidden rounded-md p-2 shadow-md"
+      className="bg-sidebar border-muted-foreground absolute z-50 flex flex-col space-y-2 overflow-hidden rounded-md border p-2 dark:border-0 dark:shadow"
       style={{
         top: y,
         left: x,

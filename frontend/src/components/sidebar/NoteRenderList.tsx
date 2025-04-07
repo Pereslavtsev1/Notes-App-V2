@@ -1,6 +1,5 @@
 import { Note } from "@/types";
 import NoteButton from "./NoteButton";
-import React from "react";
 
 type NoteRenderListProps = {
   notes: Note[];

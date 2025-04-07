@@ -1,5 +1,4 @@
-// NoteButton.tsx
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Note } from "@/types";
 import { Ellipsis } from "lucide-react";
 import { helper } from "@/functions";
@@ -15,7 +14,6 @@ const NoteButton = ({ note, className }: NoteButtonProps) => {
   const { contextMenu, setContextMenu, closeContextMenu } =
     useContextMenuContext();
   const [isHovered, setIsHovered] = useState(false);
-
   const handleEllipsisClick = (e: React.MouseEvent<SVGSVGElement>) => {
     e.stopPropagation();
     e.preventDefault();
@@ -29,7 +27,19 @@ const NoteButton = ({ note, className }: NoteButtonProps) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+  useEffect(() => {
+    const handleClick = () => {
+      closeContextMenu();
+    };
 
+    if (contextMenu.show) {
+      window.addEventListener("mousedown", handleClick);
+    }
+
+    return () => {
+      window.removeEventListener("mousedown", handleClick);
+    };
+  }, [contextMenu.show, closeContextMenu]);
   return (
     <>
       {contextMenu.show && (
